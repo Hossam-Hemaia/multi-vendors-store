@@ -1,7 +1,7 @@
 {
     "env":{
-        "MONGO_USER": "h23121980",
-        "MONGO_PASSWORD": "h23121980",
-        "MONGO_DATABASE": "Tpod"
+        "MONGO_USER": "h",
+        "MONGO_PASSWORD": "h",
+        "MONGO_DATABASE": "Taget"
     }
 }
