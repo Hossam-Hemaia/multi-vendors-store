@@ -44,8 +44,7 @@ const fileFilter = (req, file, cb) => {
     cb(null, false);
   }
 };
-//MONGO_USER=hossam MONGO_PASSWORD=h23121980 MONGO_DATABASE=tagerStore
-//mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@SG-weGoProduction-42345.servers.mongodirector.com:27017/${process.env.MONGO_DATABASE}
+
 const MONGODB_Uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.k7ohi.mongodb.net/${process.env.MONGO_DATABASE}`;
 const store = new MongoDBStore({
   uri: MONGODB_Uri,
