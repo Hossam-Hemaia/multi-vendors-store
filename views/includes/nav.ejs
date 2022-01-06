@@ -1,0 +1,88 @@
+<nav class="DNAV" dir="rtl">
+  <div class="DNAV_overflow">
+    <div class="DNAV_FLEX_MOBILE">
+      <!-- logo -->
+      <div class="DNAV_logo">
+        <img class="home-logo" src="/img/shopLogo1.png" alt="الرئيسيه" />
+      </div>
+      <!-- toggle icon -->
+      <div class="navbar__toggle" id="navbar-toggle">
+        <span class="line-1"></span>
+        <span class="line-2"></span>
+        <span class="line-3"></span>
+      </div>
+    </div>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <div class="DNAV_content" id="DNAV_content">
+      <!-- left -->
+      <ul class="DNAV_left">
+        <li class="logo-li">
+          <a href="/"
+            ><img class="home-logo" src="/img/shopLogo1.png" alt="الرئيسيه"
+          /></a>
+        </li>
+        <li>
+          <a href="/">الرئيسيه</a>
+        </li>
+        <li><a href="/market/all">السوق</a></li>
+
+        <!-- we use it with number in top -->
+        <% if (authenticatedClient) {%>
+        <li>
+          <a href="/cart">
+            <div class="ON_DAD">
+              <img
+                class="shopping__cart-nav"
+                src="/img/icon/shopping-cart3.svg"
+                alt="shopping cart icon"
+              />
+              <span class="orders-number" id="notify"></span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/orders">طلبات الشراء</a>
+        </li>
+        <% } %>
+
+        <!-- MENU -->
+        <li class="dropdown-container">
+          <button type="button" id="catBtn">الفئات</button>
+        </li>
+        <% if (isAuthenticated) { %>
+        <li class="dropdown-container-2">
+          تقارير
+          <ul class="dropdown-2">
+            <li class="dropdown__item-2">
+              <a href="/marketers/report" class="dropdown__link-2"
+                >بيانات المسوقين</a
+              >
+            </li>
+          </ul>
+        </li>
+        <% } %>
+        <!-- END -- MENU -->
+      </ul>
+      <!-- right -->
+      <ul class="DNAV_right">
+        <% if (isAuthenticated) { %>
+        <li><a href="/dashBoard">لوحة التحكم</a></li>
+        <% } %> <% if (authenticatedMarketer){%>
+        <li><a href="/marketer/dashBoard">لوحة التحكم</a></li>
+        <% } %> <% if (authenticatedClient ) {%>
+        <li class="DNAV-red"><a href="/client/profile">حسابى</a></li>
+        <% } %> <% if (isAuthenticated || authenticatedClient ||
+        authenticatedMarketer) {%>
+        <li class="DNAV-red"><a href="/logout">الخروج</a></li>
+        <% } else {%>
+        <li><a href="/register" class="call_to_action">التسجيل</a></li>
+        <li><a href="/login">الدخول</a></li>
+        <% } %>
+      </ul>
+      <input type="hidden" name="_csrf" value="<%=csrfToken%>" />
+    </div>
+  </div>
+</nav>

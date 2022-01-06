@@ -1,0 +1,74 @@
+body {
+  background-color: #161515;
+}
+.DR__Section {
+  width: 100%;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.DL_form_errors.DL_error,
+.DR_alert {
+  color: red;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.DR_forms--affilliate {
+  width: 70%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+  border: 2px solid #85837f;
+}
+.DR_affilliate-form {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+input {
+  width: 60%;
+  height: 2rem;
+  border: 0;
+  border-bottom: 2px solid #5e5b5b;
+  margin: 8px;
+}
+.DR_region {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+select {
+  width: 90%;
+  height: 2rem;
+  border: 0;
+  border-bottom: 2px solid #5e5b5b;
+}
+.DR_text-center {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+button {
+  width: 6rem;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: #adda81;
+  height: 2rem;
+}
+.DR_login {
+  color: #fa4c35;
+  font-weight: 200;
+}

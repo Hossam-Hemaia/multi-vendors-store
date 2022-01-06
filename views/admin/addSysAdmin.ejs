@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <%-include ('../includes/head.ejs')%>
+    <link rel="stylesheet" href="/css/profile.css" />
+  </head>
+  <body>
+    <!-- main container -->
+    <%-include ('../includes/nav.ejs')%>
+    <section class="DP_container">
+      <!-- content container -->
+      <div class="DP_content_background">
+        <!-- form -->
+        <form
+          action="/new/admin/create"
+          method="POST"
+          novalidate
+          class="DP_form"
+        >
+          <% if (hasError) { %>
+          <div class="DL_form_errors">
+            <small class="DL_error"><%= errorMessage %></small>
+          </div>
+          <% } %>
+          <!-- first input -->
+          <div class="DP_input--name">
+            <input
+              type="text"
+              name="name"
+              class="DP_fullname"
+              placeholder="الاسم بالكامل"
+              value="<%= hasError === true? oldInputs.oldName : '' %>"
+            />
+          </div>
+          <!-- second part -->
+          <div class="DP_input--country">
+            <input
+              type="text"
+              name="phoneNumber"
+              class="DP_country"
+              placeholder="رقم التليفون"
+              value="<%= hasError === true? oldInputs.oldPhone : '' %>"
+            />
+            <input
+              type="text"
+              name="address"
+              class="DP_city"
+              placeholder="العنوان"
+              value="<%= hasError === true? oldInputs.oldAddress : '' %>"
+            />
+          </div>
+          <!-- gender - Age -->
+          <div class="DP_age--gender">
+            <div class="DP_input--name">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="البريد الاليكترونى"
+                value="<%= hasError === true? oldInputs.oldEmail : '' %>"
+              />
+            </div>
+            <input
+              type="password"
+              name="password"
+              placeholder="كلمة المرور"
+              value="<%= hasError === true? oldInputs.oldPassword : '' %>"
+              required
+            />
+            <!-- confirm password -->
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="تأكيد كلمة المرور"
+              required
+            />
+          </div>
+          <!-- submit btn -->
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+          <button type="submit" class="DP_submit">إنشاء</button>
+        </form>
+      </div>
+    </section>
+    <%-include ('../includes/end.ejs')%>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap");
+body {
+  font-family: "Almarai", "sans-serif";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  margin-top: 24px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 4px;
+  border: 2px groove;
+  background: linear-gradient(to top, #e0e6e0, #80e633);
+  padding: 8px;
+}
+.shipping-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  border: 2px groove;
+  height: 2rem;
+  background: linear-gradient(to top, #80e633 5%, #e0e6e0);
+}
+.action-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.table-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+input,
+input:focus,
+input:active {
+  border: none;
+  width: 5rem;
+  background-color: transparent;
+  text-align: center;
+}
+/* .fees-title {
+  margin-left: 3.5rem;
+} */

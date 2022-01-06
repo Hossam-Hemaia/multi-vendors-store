@@ -1,0 +1,54 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+.star {
+  padding: 1rem 2rem;
+  display: flex;
+  position: relative;
+  transform: rotateY(180deg);
+}
+.star input {
+  display: none;
+}
+.star label {
+  position: relative;
+}
+.star label:before {
+  font-family: FontAwesome;
+  content: "\f005";
+  font-size: 3rem;
+  color: #ccc;
+  cursor: pointer;
+}
+.star label.half::before {
+  content: "\f089";
+  position: absolute;
+  left: 0;
+}
+.star input:checked + label::before,
+.star input:checked ~ label::before {
+  color: #fde104;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #25173f;
+}
+
+.rate__me {
+  font-size: 1.7rem;
+  color: white;
+  padding: 0 2rem;
+}

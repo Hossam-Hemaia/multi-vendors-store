@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="Ar" dir="rtl">
+  <head>
+    <%-include('../includes/head.ejs')%>
+    <link rel="stylesheet" href="/css/earnings.css" />
+  </head>
+  <body>
+    <%-include('../includes/nav.ejs')%>
+    <main class="container">
+      <div class="typo">
+        <h1 class="typo__heading">تقرير بيانات المسوقين</h1>
+      </div>
+      <section>
+        <div class="date">
+          <div class="date__btns">
+            <button type="button" class="rprtDownload">تحميل الملف</button>
+          </div>
+        </div>
+      </section>
+      <table>
+        <tr>
+          <th>اسم المسوق</th>
+          <th>رقم التليفون</th>
+          <th>العنوان</th>
+          <th>المحافظه</th>
+          <th>البريد الاليكترونى</th>
+        </tr>
+        <%if (marketers.length > 0){%> <%for (let marketer of marketers){%>
+        <tr>
+          <td><%=marketer.name%></td>
+          <td><%=marketer.phoneNumber%></td>
+          <td><%=marketer.address%></td>
+          <td><%=marketer.region%></td>
+          <td><%=marketer.email%></td>
+        </tr>
+        <%}%><%}%>
+      </table>
+    </main>
+    <%-include('../includes/end.ejs')%>
+    <script src="/js/designActions.js"></script>
+  </body>
+</html>

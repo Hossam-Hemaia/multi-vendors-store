@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Almarai", sans-serif;
+}
+
+main.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10rem 0;
+}
+
+@media only screen and (max-width: 75em) {
+  main.container {
+    padding: 10rem 1rem;
+  }
+}
+
+.typo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 34.375em) {
+  .typo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+}
+
+.typo__heading {
+  font-size: 2.25rem;
+  color: #820075;
+}
+
+@media only screen and (max-width: 34.375em) {
+  .typo__heading {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.typo__earnings {
+  font-size: 2.25rem;
+  color: #820075;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.typo__total {
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+}
+
+table tr,
+table th,
+table td {
+  border: 1px solid #820075;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 34.375em) {
+  table tr,
+  table th,
+  table td {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  table tr,
+  table th,
+  table td {
+    font-size: 1rem;
+  }
+}
+
+.notfound {
+  color: #ea1a7f;
+  font-size: 1.7rem;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+/*************** up *****************/
+.typo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.typo__heading {
+  margin-bottom: 15px;
+}
+.report__options {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.report {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.report label {
+  font-size: 15px;
+}
+.date {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date__inputs label {
+  font-size: 16px;
+  margin-left: 5px;
+  max-width: 500px;
+}
+
+.date__btns {
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  margin: 20px auto 30px;
+}
+.date__btns button {
+  padding: 10px 25px;
+  width: 300px;
+  color: white;
+  background-color: black;
+  border: 0;
+  cursor: pointer;
+}
+.date__btns button:last-child {
+  padding: 10px 25px;
+  width: 100%;
+  color: white;
+  background-color: rgb(39, 39, 39);
+  border: 0;
+  cursor: pointer;
+}
+.rprtDownload {
+  background-color: black;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border: 1px solid black;
+}
+.shpngAct {
+  width: 100%;
+  height: 24px;
+  border: 2px solid;
+  background: lightgreen;
+  margin-bottom: 6px;
+}
+.rjctAct {
+  width: 100%;
+  height: 24px;
+  border: 2px solid black;
+  background: red;
+  margin-top: 6px;
+  color: white;
+}

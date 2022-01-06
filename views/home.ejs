@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="Ar" dir="rtl">
+  <head>
+    <%-include ('./includes/head.ejs')%>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <%-include ('./includes/nav.ejs')%>
+    <!-- container -->
+    <div class="Home_container">
+      <!-- top part -->
+      <div class="Home_top_part">
+        <!-- heading -->
+        <h1>
+          <!-- the big part -->
+          <span class="Home_h1_big">تاجر ستور</span>
+          <!-- the small part -->
+          <span class="Home_h1_small"
+            >تاجر ستور منصه اليكترونيه للبيع والتسويق</span
+          >
+        </h1>
+      </div>
+      <!-- end top part -->
+
+      <!-- bottom part -->
+      <div class="Home_bottom_part">
+        <!-- the question -->
+        <h2 class="Home_h2_question">انت مين؟</h2>
+        <!-- container of sections -->
+        <div class="Home_bottom_sections_container">
+          <!-- right section -->
+          <div class="Home_bm_right">
+            <!-- right side informations -->
+            <h3 class="Home_type">مشترى</h3>
+            <p class="Home_details">
+              أقدر <span class="Home_green">أتسوق</span> و
+              <span class="Home_green">اشترى</span> أى منتج معروض فى الموقع
+              بافضل الاسعار واعلى الجودات
+            </p>
+            <a href="/market/all" class="Home_market_btn">الذهاب للسوق</a>
+          </div>
+          <!-- left section -->
+          <div class="Home_bm_left">
+            <!-- right side informations -->
+            <h3 class="Home_type">بائع</h3>
+            <p class="Home_details">
+              سجل معانا واعرض منتجاتك بشكل سريع وبسيط وبدون خطوات معقده
+            </p>
+            <a href="/register/2" class="Home_dashboard_btn">التسجيل معنا</a>
+          </div>
+        </div>
+      </div>
+      <div class="latest-products">
+        <%for (let p of products){%>
+        <div class="card">
+          <div class="category">
+            <a href="/category/<%=p.product.category%>"><h2><%=p.cat%></h2></a>
+          </div>
+          <div class="card-img">
+            <a href="/market/productDetails/<%=p.product._id%>"
+              ><img
+                src="<%=p.product.imagePath[0]%>"
+                alt="<%=p.product.title%>"
+            /></a>
+          </div>
+          <div class="card-action">
+            <a href="/market/productDetails/<%=p.product._id%>">شراء</a>
+            <a href="/category/<%=p.product.category%>">المزيد...</a>
+          </div>
+        </div>
+        <%}%>
+      </div>
+      <!-- bottom part -->
+      <!-- bottom products gallary -->
+    </div>
+    <!-- End container -->
+    <%-include ('./includes/end.ejs')%>
+    <div dir="ltr">
+      <label for="visitors" class="visitor-lbl">Visitors</label>
+      <input type="number" value="<%=visits%>" disabled class="visitor-val" />
+    </div>
+  </body>
+</html>
